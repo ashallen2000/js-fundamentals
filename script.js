@@ -55,8 +55,49 @@ as it involves requiring the user to answer the questions in an exact way.
 Multiple choice will avoid this.
 */
 
+const questions = [
+    {
+        text: "A male Gerudo is born into the tribe every how many years?",
+        options: ["50 years.", "100 years.", "150 years.", "200 years."],
+        answer: "100 years."
+    },
+    {
+        text: "What is the name of Link's fairy in Ocarina of Time?",
+        options: ["Navi.", "Tatl.", "Fi.", "Zelda."],
+        answer: "Navi."
+    },
+    {
+        text: "What console was Twilight Princess originally released on?",
+        options: ["Wii.", "Gamecube.", "SNES.", "N64."],
+        answer: "Gamecube."
+    },
+    {
+        text: "What happens to the Mirror of Twilight at the end of Twilight Princess?",
+        options: ["It is shattered by Midna.", "It is stolen by ganondorf.", "It is shattered by link.","Zant harnesses its power."],
+        answer: "It is shattered by Midna."
+    },
+    {
+        text: "What is the first song that Link learns in Ocarina of time?",
+        options: ["Zelda's Lullaby", "Song of Storms", "Saria's Song","Deku's Theme."],
+        answer: "Zelda's Lullaby"
+    }
+];
+
+const checkAnswer = (selected, correctAnswer) => {
+    if (selected === correctAnswer) {
+        console.log("Correct Answer! Good job.")
+    } else
+    {console.log("Incorrect. Try again!")}
+};
+
+checkAnswer("Zelda's Lullaby", "Zelda's Lullaby")
+checkAnswer("Zelda's Lullaby","Zelda's Good Song")
 
 
+
+questions.forEach((question) =>{
+    console.log(question.text);
+})
 
 
 
